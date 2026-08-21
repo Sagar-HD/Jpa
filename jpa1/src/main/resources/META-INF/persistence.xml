@@ -1,0 +1,11 @@
+<persistence>
+    <persistence-unit name="xworkz">
+        <properties>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/jpa"></property>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"></property>
+            <property name="javax.persistence.jdbc.username" value="root"  ></property>
+            <property name="javax.persistence.jdbc.password" value="sagarhd" ></property>
+        </properties>
+
+    </persistence-unit>
+</persistence>

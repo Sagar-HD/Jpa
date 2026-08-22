@@ -1,9 +1,7 @@
 package com.sagar.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import jakarta.persistence.*;
+
 
 import java.time.LocalDate;
 import java.time.Year;
@@ -11,7 +9,7 @@ import java.time.Year;
 @Entity
 public class Car {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @Column(name = "car_name")
@@ -20,5 +18,27 @@ public class Car {
     @Column(name = "model_year")
     private Year modelYear;
 
+    public String getCarName() {
+        return carName;
+    }
 
+    public void setCarName(String carName) {
+        this.carName = carName;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public Year getModelYear() {
+        return modelYear;
+    }
+
+    public void setModelYear(Year modelYear) {
+        this.modelYear = modelYear;
+    }
 }

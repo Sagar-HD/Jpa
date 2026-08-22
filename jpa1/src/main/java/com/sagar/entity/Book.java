@@ -1,6 +1,6 @@
 package com.sagar.entity;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 public class Book {
@@ -13,4 +13,36 @@ public class Book {
     private String authorName;
     @Column(name = "no_of_pages")
     private int noOfPages;
+
+    public String getAuthorName() {
+        return authorName;
+    }
+
+    public void setAuthorName(String authorName) {
+        this.authorName = authorName;
+    }
+
+    public String getBookName() {
+        return bookName;
+    }
+
+    public void setBookName(String bookName) {
+        this.bookName = bookName;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public int getNoOfPages() {
+        return noOfPages;
+    }
+
+    public void setNoOfPages(int noOfPages) {
+        this.noOfPages = noOfPages;
+    }
 }

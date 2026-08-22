@@ -1,6 +1,8 @@
 package com.sagar.entity;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
+
+
 
 @Entity
 public class Product {
@@ -11,5 +13,19 @@ public class Product {
     @Column(name = "name")
     private String productName;
 
+    public long getId() {
+        return id;
+    }
 
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
 }
